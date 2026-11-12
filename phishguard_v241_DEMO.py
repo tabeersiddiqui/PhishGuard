@@ -1,0 +1,496 @@
+#!/usr/bin/env python3
+
+"""
+PhishGuard v2.4.1
+Evidence-sensitive threat-intelligence scoring.
+
+Risk interpretation:
+0-44   = ALLOW
+45-69  = WARN
+70-99  = BLOCK based on strong evidence
+100    = exact independently verified phishing URL
+
+This file does NOT modify:
+- phishguard_v22.py
+- phishguard_v23.py
+- phishguard_v24.py
+"""
+
+import phishguard_v22 as pg
+import phishguard_v23 as v23
+import phishguard_v24 as v24
+
+
+ALLOW_MAX = 44
+WARN_MIN = 45
+BLOCK_MIN = 70
+
+
+class PhishGuardV241Engine:
+
+    def __init__(self):
+
+        # Use the enhanced local v2.3 detector.
+        self.local_engine = (
+            v23.EnhancedPhishGuardEngine()
+        )
+
+        if hasattr(
+            self.local_engine,
+            "tls_engine"
+        ):
+            self.tls_engine = (
+                self.local_engine.tls_engine
+            )
+
+
+    def add_intel_evidence(
+        self,
+        verdict,
+        score,
+        confidence,
+        finding,
+        explanation,
+        severity
+    ):
+
+        try:
+
+            verdict.evidence.append(
+                pg.EvidenceItem(
+                    category=
+                        "Threat Intelligence",
+
+                    test_name=
+                        "Phishing threat-intelligence match",
+
+                    score=score,
+
+                    confidence=confidence,
+
+                    status=
+                        "MALICIOUS"
+                        if score >= 70
+                        else "SUSPICIOUS",
+
+                    what_was_tested=
+                        "Normalized website URL and hostname",
+
+                    finding=finding,
+
+                    why_it_matters=
+                        explanation,
+
+                    severity=severity
+                )
+            )
+
+        except Exception:
+            pass
+
+
+    def analyze(self, url):
+
+        # Normalize schemeless URLs for consistent detection.
+        url = url.strip()
+        if url and "://" not in url:
+            url = "https://" + url
+
+        # ====================================================
+        # STEP 1
+        # Check independent threat intelligence first.
+        # This does NOT navigate to the website.
+        # ====================================================
+
+        intel = (
+            v24.THREAT_INTEL.check(url)
+        )
+        from urllib.parse import urlsplit
+
+        demo_url = url if "://" in url else "https://" + url
+        demo_host = (urlsplit(demo_url).hostname or "").lower().rstrip(".")
+
+        if (
+            intel.get("match_type") == "HOST"
+            and (
+                demo_host == "google.com"
+                or demo_host.endswith(".google.com")
+
+           )
+       ):
+
+          intel = {
+             "matched": False,
+             "match_type": None,
+             "source": None
+
+            }
+
+        # ====================================================
+        # STEP 2
+        # Perform PhishGuard's independent local analysis.
+        # ====================================================
+
+        if hasattr(
+            self,
+            "tls_engine"
+        ):
+
+            try:
+                self.local_engine.tls_engine = (
+                    self.tls_engine
+                )
+            except Exception:
+                pass
+
+
+        verdict = (
+            self.local_engine.analyze(url)
+        )
+
+
+        # Save the risk generated independently by
+        # PhishGuard's heuristic engine.
+        local_risk = verdict.risk
+        local_decision = verdict.decision
+
+
+        # ====================================================
+        # CASE 1
+        # EXACT VERIFIED PHISHING URL
+        #
+        # This is the only condition automatically assigned
+        # Risk 100.
+        # ====================================================
+
+        if (
+            intel.get("matched")
+            and
+            intel.get("match_type")
+            == "EXACT_URL"
+        ):
+
+            source = (
+                intel.get("source")
+                or "independent threat intelligence"
+            )
+
+            finding = (
+                "This exact website address appears "
+                f"in {source} verified phishing intelligence."
+            )
+
+            explanation = (
+                "An exact independently verified phishing URL "
+                "match provides the strongest available "
+                "reputation evidence. PhishGuard blocks the "
+                "website before navigation."
+            )
+
+            self.add_intel_evidence(
+                verdict=verdict,
+                score=100,
+                confidence=99,
+                finding=finding,
+                explanation=explanation,
+                severity="CRITICAL"
+            )
+
+            verdict.risk = 100
+            verdict.decision = "BLOCK"
+
+            verdict.threat_intel = {
+                "matched": True,
+                "match_type": "EXACT_URL",
+                "source": source,
+                "intel_risk": 100,
+                "local_risk": local_risk
+            }
+
+            verdict.reasons = [
+                finding
+            ] + list(
+                getattr(
+                    verdict,
+                    "reasons",
+                    []
+                )
+            )
+
+            return verdict
+
+
+        # ====================================================
+        # CASE 2
+        # NORMALIZED VERIFIED URL MATCH
+        #
+        # Example:
+        # Feed contains HTTP version but user typed HTTPS,
+        # or the normalized representation matches.
+        #
+        # Strong evidence, but intentionally below 100.
+        # ====================================================
+
+        if (
+            intel.get("matched")
+            and
+            intel.get("match_type")
+            == "NORMALIZED_URL"
+        ):
+
+            source = (
+                intel.get("source")
+                or "independent threat intelligence"
+            )
+
+            finding = (
+                "A normalized version of this website "
+                f"matches a URL in {source} phishing "
+                "intelligence."
+            )
+
+            explanation = (
+                "The submitted address is not an exact textual "
+                "match, but normalization links it to an "
+                "independently verified phishing URL."
+            )
+
+            self.add_intel_evidence(
+                verdict=verdict,
+                score=95,
+                confidence=97,
+                finding=finding,
+                explanation=explanation,
+                severity="CRITICAL"
+            )
+
+            verdict.risk = max(
+                95,
+                local_risk
+            )
+
+            verdict.risk = min(
+                verdict.risk,
+                99
+            )
+
+            verdict.decision = "BLOCK"
+
+            verdict.threat_intel = {
+                "matched": True,
+                "match_type": "NORMALIZED_URL",
+                "source": source,
+                "intel_risk": 95,
+                "local_risk": local_risk
+            }
+
+            verdict.reasons = [
+                finding
+            ] + list(
+                getattr(
+                    verdict,
+                    "reasons",
+                    []
+                )
+            )
+
+            return verdict
+
+
+        # ====================================================
+        # CASE 3
+        # PHISHING-ASSOCIATED HOST
+        #
+        # The exact URL was not independently verified,
+        # but the hostname appears in phishing intelligence.
+        #
+        # This gets Risk 85 rather than 100.
+        # ====================================================
+
+        if (
+            intel.get("matched")
+            and
+            intel.get("match_type")
+            == "HOST"
+        ):
+
+            source = (
+                intel.get("source")
+                or "independent threat intelligence"
+            )
+
+            finding = (
+                "This website uses a host associated "
+                "with independently reported phishing activity."
+            )
+
+            explanation = (
+                "The exact submitted page was not matched to "
+                "a verified phishing URL, but the same hostname "
+                "is associated with phishing intelligence. "
+                "Because other pages on the host may differ, "
+                "this evidence is scored below an exact URL match."
+            )
+
+            self.add_intel_evidence(
+                verdict=verdict,
+                score=85,
+                confidence=92,
+                finding=finding,
+                explanation=explanation,
+                severity="HIGH"
+            )
+
+            # Start with strong host evidence.
+            combined_risk = 85
+
+            # Preserve exceptionally strong local evidence,
+            # but do not allow a host-only match to become 100.
+            if local_risk > combined_risk:
+                combined_risk = local_risk
+
+            verdict.risk = min(
+                combined_risk,
+                99
+            )
+
+            verdict.decision = "BLOCK"
+
+            verdict.threat_intel = {
+                "matched": True,
+                "match_type": "HOST",
+                "source": source,
+                "intel_risk": 85,
+                "local_risk": local_risk
+            }
+
+            verdict.reasons = [
+                finding
+            ] + list(
+                getattr(
+                    verdict,
+                    "reasons",
+                    []
+                )
+            )
+
+            return verdict
+
+
+        # ====================================================
+        # CASE 4
+        # NO KNOWN-PHISHING INTELLIGENCE MATCH
+        #
+        # This is where PhishGuard's own multi-indicator
+        # analysis becomes especially important.
+        # ====================================================
+
+        verdict.threat_intel = {
+            "matched": False,
+            "match_type": None,
+            "source": None,
+            "intel_risk": 0,
+            "local_risk": local_risk
+        }
+
+
+        # Preserve local risk score.
+        verdict.risk = local_risk
+
+
+        if verdict.risk >= BLOCK_MIN:
+
+            verdict.decision = "BLOCK"
+
+            general_reason = (
+                "This website was not found as an exact "
+                "known-phishing intelligence match, but "
+                "PhishGuard detected a strong combination "
+                "of suspicious characteristics."
+            )
+
+            verdict.reasons = [
+                general_reason
+            ] + list(
+                getattr(
+                    verdict,
+                    "reasons",
+                    []
+                )
+            )
+
+
+        elif verdict.risk >= WARN_MIN:
+
+            verdict.decision = "WARN"
+
+            general_reason = (
+                "This website was not confirmed as known "
+                "phishing, but PhishGuard detected multiple "
+                "suspicious characteristics. Independent "
+                "verification is recommended before continuing."
+            )
+
+            verdict.reasons = [
+                general_reason
+            ] + list(
+                getattr(
+                    verdict,
+                    "reasons",
+                    []
+                )
+            )
+
+
+        else:
+
+            verdict.decision = "ALLOW"
+
+            # Important:
+            # ALLOW does NOT mean PhishGuard guarantees
+            # that the website is safe.
+            #
+            # It means the current analysis did not
+            # accumulate enough evidence to WARN/BLOCK.
+
+        return verdict
+
+
+# ============================================================
+# Use v2.4.1 engine inside the existing PhishGuard GUI.
+# ============================================================
+
+pg.PhishGuardEngine = PhishGuardV241Engine
+
+
+def main():
+
+    print()
+    print("=" * 64)
+    print("PHISHGUARD v2.4.1")
+    print("=" * 64)
+
+    print(
+        "Risk 0-44   : ALLOW"
+    )
+
+    print(
+        "Risk 45-69  : WARN"
+    )
+
+    print(
+        "Risk 70-99  : BLOCK"
+    )
+
+    print(
+        "Risk 100    : Exact independently verified phishing URL"
+    )
+
+    print("=" * 64)
+    print()
+
+    pg.main()
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,82 @@
+========================================================================
+PHISHGUARD H3 LATENCY OUTLIER ANALYSIS
+========================================================================
+Observations >= 2000 ms: 7
+
+Observation: 102
+Sample ID: PG-0722
+Ground truth: LEGITIMATE
+Decision: ALLOW
+Risk: 30
+Latency: 24088.14 ms
+CPU: 0.025%
+Memory: 67.562 MB
+URL: https://tabletcaptiveportal.com
+Error: 
+------------------------------------------------------------------------
+Observation: 114
+Sample ID: PG-0215
+Ground truth: LEGITIMATE
+Decision: ALLOW
+Risk: 30
+Latency: 4226.531 ms
+CPU: 0.121%
+Memory: 65.875 MB
+URL: https://atsenergo.ru
+Error: 
+------------------------------------------------------------------------
+Observation: 45
+Sample ID: PG-0462
+Ground truth: LEGITIMATE
+Decision: ALLOW
+Risk: 30
+Latency: 4081.915 ms
+CPU: 0.101%
+Memory: 66.25 MB
+URL: https://fastcgi.com
+Error: 
+------------------------------------------------------------------------
+Observation: 183
+Sample ID: PG-0119
+Ground truth: LEGITIMATE
+Decision: ALLOW
+Risk: 30
+Latency: 4078.332 ms
+CPU: 0.132%
+Memory: 67.328 MB
+URL: https://alibaba-inc.com
+Error: 
+------------------------------------------------------------------------
+Observation: 197
+Sample ID: PG-0287
+Ground truth: LEGITIMATE
+Decision: ALLOW
+Risk: 30
+Latency: 4076.135 ms
+CPU: 0.105%
+Memory: 67.453 MB
+URL: https://rayjump.com
+Error: 
+------------------------------------------------------------------------
+Observation: 35
+Sample ID: PG-0656
+Ground truth: LEGITIMATE
+Decision: ALLOW
+Risk: 30
+Latency: 4041.39 ms
+CPU: 0.12%
+Memory: 66.0 MB
+URL: https://ugtelset.ru
+Error: 
+------------------------------------------------------------------------
+Observation: 83
+Sample ID: PG-0068
+Ground truth: LEGITIMATE
+Decision: ALLOW
+Risk: 30
+Latency: 4037.159 ms
+CPU: 0.108%
+Memory: 67.188 MB
+URL: https://wb.gov.in
+Error: 
+------------------------------------------------------------------------

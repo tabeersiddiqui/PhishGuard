@@ -1,0 +1,75 @@
+========================================================================
+PHISHGUARD H3 OPERATIONAL PERFORMANCE EXPERIMENT
+========================================================================
+
+Dataset: phishguard_dataset_validation.csv
+Total observations: 200
+Successful observations: 200
+Errors: 0
+
+CONFIGURATION
+------------------------------------------------------------------------
+Engine: PhishGuard v2.3 EnhancedPhishGuardEngine
+Threat intelligence: OFF
+TLS analysis: ON
+Logical CPU count used for normalization: 8
+Inter-observation delay: 0.50 seconds
+
+ENGINEERING ACCEPTANCE THRESHOLDS
+------------------------------------------------------------------------
+CPU utilization: < 15.00%
+Memory utilization: < 300.00 MB
+Analysis latency: < 2000.00 ms
+
+ANALYSIS LATENCY
+------------------------------------------------------------------------
+Mean:   415.669 ms
+Median: 119.942 ms
+P95:    1023.903 ms
+Maximum: 24088.140 ms
+Observations under 2 seconds: 193/200 (96.50%)
+
+CPU UTILIZATION
+------------------------------------------------------------------------
+Mean:   4.156%
+Median: 4.079%
+P95:    7.153%
+Peak:   12.172%
+Observations under 15%: 200/200 (100.00%)
+
+MEMORY UTILIZATION
+------------------------------------------------------------------------
+Baseline RSS: 118.141 MB
+Mean observed RSS: 70.727 MB
+Median observed RSS: 66.953 MB
+Peak observed RSS: 118.625 MB
+Observations under 300 MB: 200/200 (100.00%)
+
+NETWORK ACTIVITY
+------------------------------------------------------------------------
+Bytes sent during measured experiment: 504832
+Bytes received during measured experiment: 1348608
+Total observed system network bytes: 1853440
+
+Network counters are system-wide interface counters and therefore are descriptive rather than PhishGuard-process-attributable.
+TLS inspection may create destination-host network activity.
+
+EXPERIMENT DURATION
+------------------------------------------------------------------------
+Measured workload duration: 184.120 seconds
+
+H3 THRESHOLD ASSESSMENT
+------------------------------------------------------------------------
+Mean CPU < 15%: PASS
+Peak memory < 300 MB: PASS
+P95 latency < 2 seconds: PASS
+
+Primary H3 operational assessment uses mean CPU utilization, peak observed memory utilization, and P95 analysis latency.
+Per-observation values are retained in the detailed CSV for engineering variability and outlier analysis.
+
+========================================================================
+H3 PERFORMANCE TEST COMPLETE
+========================================================================
+
+Detailed results: h3_performance_results.csv
+Summary: h3_performance_summary.txt

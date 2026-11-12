@@ -1,0 +1,43 @@
+========================================================================
+PHISHGUARD H2 VALIDATION PAIRED STATISTICAL ANALYSIS
+========================================================================
+Observations: 200
+Test: Exact two-sided McNemar
+Alpha: 0.05
+
+------------------------------------------------------------------------
+A_URL_DOMAIN vs D_FULL
+------------------------------------------------------------------------
+Both correct:              95
+A_URL_DOMAIN only correct: 5
+D_FULL only correct:       13
+Both incorrect:            87
+Discordant pairs:          18
+Exact McNemar p-value:     0.09625244
+Not statistically significant at alpha = 0.05
+
+------------------------------------------------------------------------
+B_BRAND_LEXICAL vs D_FULL
+------------------------------------------------------------------------
+Both correct:              102
+B_BRAND_LEXICAL only correct: 0
+D_FULL only correct:       6
+Both incorrect:            92
+Discordant pairs:          6
+Exact McNemar p-value:     0.03125000
+Statistically significant at alpha = 0.05
+
+------------------------------------------------------------------------
+C_TLS vs D_FULL
+------------------------------------------------------------------------
+Both correct:              95
+C_TLS only correct: 5
+D_FULL only correct:       13
+Both incorrect:            87
+Discordant pairs:          18
+Exact McNemar p-value:     0.09625244
+Not statistically significant at alpha = 0.05
+
+========================================================================
+ANALYSIS COMPLETE
+========================================================================

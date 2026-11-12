@@ -1,0 +1,11 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.env.*
+*.log
+*.zip
+threat_intel/openphish.txt
+threat_intel/phishtank_verified.csv

@@ -1,0 +1,3268 @@
+==============================================================================
+PHISHGUARD H1 POST-TEST ERROR AND DETECTION REASONING ANALYSIS
+==============================================================================
+
+SOURCE FILE:
+h1_paired_results_H1_CORRECTED_FROZEN.csv
+
+IMPORTANT:
+This analysis does not modify the frozen H1 results.
+The local PhishGuard engine is rerun only to retrieve indicator-level
+evidence explaining the previously frozen classifications.
+Threat-intelligence matching is not used.
+
+
+==============================================================================
+TRUE POSITIVES - PhishGuard detected phishing
+COUNT: 9
+==============================================================================
+
+[1] PG-0296
+URL: http://allegrolokalnie.pl-ogloszenia-firmowe-id902430.click
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 81
+Classification: TP
+
+PhishGuard evidence:
+  - Transport Security | HTTPS Check | +18 | The URL does not use HTTPS.
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Top-Level Domain | Suspicious TLD Check | +15 | The domain uses .click, which is on the suspicious TLD list.
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[2] PG-0272
+URL: https://astroquantum.click/sparkasse/login.php
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 50
+Classification: TP
+
+PhishGuard evidence:
+  - Top-Level Domain | Suspicious TLD Check | +15 | The domain uses .click, which is on the suspicious TLD list.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Lexical Analysis | Authentication or urgency terminology | +5 | The URL contains phishing-associated terms: login
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[3] PG-0981
+URL: https://brave-teal-rooster.31-22-7-7.cpanel.site/hub/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 52
+Classification: TP
+
+PhishGuard evidence:
+  - URL Structure | Subdomain Depth Check | +12 | The host contains several subdomain levels.
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[4] PG-0358
+URL: http://allegro.871288igiru7.shop
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 77
+Classification: TP
+
+PhishGuard evidence:
+  - Transport Security | HTTPS Check | +18 | The URL does not use HTTPS.
+  - Top-Level Domain | Suspicious TLD Check | +15 | The domain uses .shop, which is on the suspicious TLD list.
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Domain Structure | High numeric hostname content | +6 | Approximately 28% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[5] PG-0196
+URL: https://applemymusic.com/captcha.php
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 100
+Classification: TP
+
+PhishGuard evidence:
+  - Brand Impersonation | Known Brand Similarity Check | +85 | The domain embeds the apple brand name inside a non-official domain.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Brand Impersonation | Brand reference on non-official domain | +14 | Brand-related term(s) appear outside their official domain: apple
+
+Brand result: The domain embeds the apple brand name inside a non-official domain.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[6] PG-0378
+URL: https://allegrolokalnie.pl-598012845.lat/oferta/50443652/odkurzacz-pioracy-karcher-puzzi-10-1
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 48
+Classification: TP
+
+PhishGuard evidence:
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - URL Structure | Long URL | +4 | The URL contains 93 characters.
+  - Domain Structure | High numeric hostname content | +6 | Approximately 28% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[7] PG-0526
+URL: http://nodu1718.odns.fr/sjssjdj/alibaba
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 54
+Classification: TP
+
+PhishGuard evidence:
+  - Transport Security | HTTPS Check | +18 | The URL does not use HTTPS.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Domain Structure | High numeric hostname content | +6 | Approximately 25% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[8] PG-0205
+URL: http://allegro.89015.lat/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 62
+Classification: TP
+
+PhishGuard evidence:
+  - Transport Security | HTTPS Check | +18 | The URL does not use HTTPS.
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Domain Structure | High numeric hostname content | +6 | Approximately 29% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[9] PG-0723
+URL: https://klelnanzeigen-deutsch.id5820.info/getpaymentm/267316711/m9
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 58
+Classification: TP
+
+PhishGuard evidence:
+  - Top-Level Domain | Suspicious TLD Check | +15 | The domain uses .info, which is on the suspicious TLD list.
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Lexical Analysis | Authentication or urgency terminology | +5 | The URL contains phishing-associated terms: payment
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+GROUP RISK SUMMARY
+Minimum risk: 48
+Maximum risk: 100
+Mean risk: 64.67
+
+==============================================================================
+FALSE NEGATIVES - PhishGuard missed phishing
+COUNT: 91
+==============================================================================
+
+[1] PG-0850
+URL: https://xn--2n1b810a1er8ivvcx0yyhc.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 37
+Classification: FN
+
+PhishGuard evidence:
+  - International Domain | IDN/Punycode Check | +22 | The ASCII hostname contains punycode. Unicode form: 시스템업데이트.weebly.com
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[2] PG-0777
+URL: https://www.dropbox.com/scl/fi/9x7kn4jsqd8q4z07hq1i9/Your-Latest-Bill-Is-Ready.paper?rlkey=zwbd8jod63ubmt8e1b929g6hr&st=qw7ogpqz&dl=0
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 14
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +8 | The URL contains 133 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.26 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[3] PG-0293
+URL: https://bridgeenus.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[4] PG-0553
+URL: https://www.dropbox.com/l/AADMvvP6HzkDd5QFQPKcs5vUwVE8SmTeKvQ/privacy
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 6
+Classification: FN
+
+PhishGuard evidence:
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 4.80 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[5] PG-0093
+URL: https://trezo-home.framer.media/cdn-wallet
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Lexical Analysis | Authentication or urgency terminology | +5 | The URL contains phishing-associated terms: wallet
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[6] PG-0047
+URL: https://junowebmail01.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[7] PG-0647
+URL: https://wmailzzkrzjkut5999.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[8] PG-0106
+URL: https://us6.campaign-archive.com/?u=24d1b23905a7794382975f490&id=9cc8c8c0b9
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 75 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[9] PG-0268
+URL: https://onnlineepaay.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[10] PG-0468
+URL: https://justice-gov-za.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[11] PG-0308
+URL: https://kleinanzeigen.nmgdfjd.com/142325909?mail=W1BPTFlBXQ==&meta=rlWjMKWwLJ50LJqyVwb1YPWhLJ1yVwbvKUIxBQAwKUIxMwZ4VSOioUyuVR1unJkypvVfVzAbLKEsnJDvBv0kZQNmBGH4ZQxmAGp1YPWmMKW2nJAyVwbvn2kynJ5uoacynJqyovVfVaE5pTHvBvWjo2k5LI9gLJyfMKVvsD==
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 18
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +12 | The URL contains 235 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.59 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[12] PG-0217
+URL: https://publictrezorsuite.wixstudio.com/suite-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[13] PG-0694
+URL: https://gmxxms.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[14] PG-0872
+URL: https://en-ledgrcdn.wixstudio.com:443/live-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[15] PG-0138
+URL: https://signinwebb0.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: signin
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[16] PG-0827
+URL: https://m--portal--uphld--autth--m.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[17] PG-0375
+URL: https://connect-suiteapp.wixstudio.com/en-us
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[18] PG-0807
+URL: https://eu.jotform.com/app/251920909377869
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[19] PG-0617
+URL: https://www.dropbox.com/scl/fi/55t4cn1aboodqoci1y2n7/UPDATE-BT-SECURITY-SERVICE.papert?rlkey=kp4d6xq1ryp33q3rg1p7fvwzm&dl=0
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 24
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +8 | The URL contains 123 characters.
+  - Lexical Analysis | Authentication or urgency terminology | +10 | The URL contains phishing-associated terms: security, update
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.43 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[20] PG-0890
+URL: https://catalystbank.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[21] PG-0586
+URL: https://bhd2026loginlia001.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: login
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[22] PG-0813
+URL: https://nic-uniza-sk.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[23] PG-0202
+URL: https://bradesco.chatnetempresas.click/inicio
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Top-Level Domain | Suspicious TLD Check | +15 | The domain uses .click, which is on the suspicious TLD list.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[24] PG-0527
+URL: https://cnlin0-apgfcu-1uux-aspx.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[25] PG-0361
+URL: https://www.dropbox.com/l/scl/AABduUn0uPi4kaLbBKRWENK3oG2zg7NZHYQ
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 6
+Classification: FN
+
+PhishGuard evidence:
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 4.99 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[26] PG-0596
+URL: https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAHHxMtdUMzcwRDJIOVI4NVpLWFUyVTdBSFNOOFdNVC4u
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +8 | The URL contains 132 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.17 bits per character.
+
+Brand result: The domain matches the known official domain for microsoft.
+TLS result: validated=True, score=0, error=None
+
+[27] PG-0922
+URL: https://us6.campaign-archive.com/?u=d8e9ad3c1a7609f1584a66227&id=edd9a4eac0
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 75 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[28] PG-0545
+URL: https://informacion-suscripcion.com/captcha.php
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[29] PG-0372
+URL: https://lgderlive-portfolio.wixstudio.com/live
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[30] PG-0067
+URL: https://blluuepeak.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[31] PG-0065
+URL: https://bridge-tre.wixstudio.com/trezor-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[32] PG-0301
+URL: https://activarcuentabhd-validacionusuario.weebly.com
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[33] PG-0097
+URL: https://us5.campaign-archive.com/?u=4b64b000a63ae29b59b11a3da&id=a9bce0df2e
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 75 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[34] PG-0715
+URL: https://clee-securite.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[35] PG-0016
+URL: https://vnvnvnvnvnvnvnvncnnsnn.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[36] PG-0709
+URL: https://web859869383.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 11
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+  - Domain Structure | High numeric hostname content | +6 | Approximately 39% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[37] PG-0219
+URL: https://azcorpdaaauummmkaoakaoaakaoaoaoaoako.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[38] PG-0385
+URL: https://cmcomcast2025.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[39] PG-0077
+URL: https://xfinityyycomcastloginn.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: login
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[40] PG-0567
+URL: https://us7.campaign-archive.com/?u=eed2b00d4c76b5d4dd3d80cb0&id=4c0e6f586b
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 75 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[41] PG-0076
+URL: https://promotion2025.z7.web.core.windows.net/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 12
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Subdomain Depth Check | +12 | The host contains several subdomain levels.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[42] PG-0116
+URL: https://did.li/KougT
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[43] PG-0962
+URL: https://u58318934.ct.eu.sendgrid.net/ls/click?upn=u001.rTDvdKINTd6xm0TqIVyXJAXCcf1EFroENlkKbR042TIoWY478R7ofU5K65vWs1ejSLPXj0ERZ9OlkUnzH53bwCfISydff0cy5pSU3v-2F5ZPbRBDtgVUFsr2pj6iHBRonXEcZERTIJTiSQn-2B3Ee-2Fo1CjP6EKbYiRGrfHaYBXsdlLo-3DZZVB_nGQDzkuAQnN7sgIPNIql1L0SgUa7z3mRcEYh-2BZDGGJWhWKekNRVJk-2BshxL48KRGqdEUxyafLQOZmopehVyuxtPbHpl2bNoHEmq956HMtqKn0ZXoD2aL-2FEjHSMYag-2B5-2FFr1oj0uGgf1aLyPsMJMuTtc0I3vg-2BkwwO9xBWA6OZQ-2B50xMejGZhndPb-2BV2KhGq4Hrp2DqDSW-2B-2FUW33Al7B-2BDEzBieytwLMsyf2jVmKJjudNkedxesQr8AAgGJdSUMjYVYSLICJgOiK59GQqe9RfxMGcee-2BTRs4CU7L49noYLYZFCT1eL-2BhuosCLv7E8klsCYA76kWlVpHHv7NxyaQnxFZPp1mX0zKNnzc9Px8ip8bavY5v7B5F8gwYjrhb-2B7y-2FLrkRzM8GQO1r1GIXyD-2B57tF-2ByY81VmBIVcGFZwoPdZdQZ2eegroAqKdUM9Z1D-2Fw0jCUvhm-2BtwDsfupORha-2BB1am4r896PrIh8ftzK-2FGidnJE-2By0ly7U6sAwWKyBCLeBrVyiaSCzyJVEkbONYzx52SoqDRJ9w6a13j2qeRstMG7CEGNsU67LEZcxNiEWvdfhtfOuwu6Nz-2Be2vr1o36Hb9-2BvzFhxpa79-2BwxXFPMoASkPRtsWGmFd6vF9xUqYcz909DPDmPwCfzkivXbnwbasVU4bh8xkkXL1QXD-2FJ6p7RFDvApU-3D#4SHIKi1193tjHH78lkqsezouzt93OYDNARRFAYDLSTZ197550TQHH26636x1
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 42
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Subdomain Depth Check | +12 | The host contains several subdomain levels.
+  - URL Structure | Long URL | +12 | The URL contains 1039 characters.
+  - URL Structure | High structural complexity | +6 | The URL contains 38 structural delimiter characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.93 bits per character.
+  - Domain Structure | High numeric hostname content | +6 | Approximately 29% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[44] PG-0282
+URL: https://conxm.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[45] PG-0294
+URL: https://redirect63.wixsite.com/my-site-3
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under wixsite.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[46] PG-0924
+URL: https://weblinkupdateunacheduec.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: update
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[47] PG-0523
+URL: https://www.dropbox.com/scl/fi/f5g9ogchna9kffy3peid0/British-Telecommunication.paper?rlkey=8rbz4v7d2x7o8nzru7f8tidi9&dl=0
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 14
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +8 | The URL contains 121 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.00 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[48] PG-0942
+URL: https://eu.jotform.com/app/252063174360349
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[49] PG-0051
+URL: https://app.jotform.com/251676275174565
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[50] PG-0603
+URL: http://www.dropbox.com/scl/fi/ef47nqebgnui5shjd9uzv/2024-BTINTERNET-VERIFICATION-BELOW.paper?rlkey=xd1cv3lnxvsfs0es2el099z4x&dl=0
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 37
+Classification: FN
+
+PhishGuard evidence:
+  - Transport Security | HTTPS Check | +18 | The URL does not use HTTPS.
+  - URL Structure | Long URL | +8 | The URL contains 129 characters.
+  - Lexical Analysis | Authentication or urgency terminology | +5 | The URL contains phishing-associated terms: verification
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.35 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[51] PG-0432
+URL: https://micro-metamask.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[52] PG-0290
+URL: https://sign-in-to-xfinity-loginss.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 19
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: login
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[53] PG-0644
+URL: https://adclick.g.doubleclick.net/aclk?sa=l&amp;ai=C_tcvLGPmZLLzI-j5zLUPx5utuA-A8KyUcsWVhpLOEfWN_MIDEAEgo6aKdmDBgtoDoAG9h5DmKcgBCagDAcgDigSYBAiqBK4CT9DbBzt6PxXVD46iXaw6-iLmJM69Oj2brlt-RuYRyJTxnOGUfgIjQudrYePQPnwlR4tHLQ4XXIbXawZOHXK3WADFdIDT3wTzs36rbI23LC0zqintjo-3VKEvtoX3RPeEu1PwCOT1glPu2wz3PQprQ795o5wovygeGIvrVWOEHJ6WNvyXYWDTk9dQmtMdmUcuA9htqy_CGWf1JCrVk3_00NhrNnCRgDV4v6Si_GlX_fzEArxhu2x8YNfZke-fi-C8FyjrPnAKvcRzC0aSYzuNrlvbapmI2jpOxKX7K_fgLFb6vuaoSfkpE3btRsRLC9Wav5hCuvyhL5rbDb9zQk1UTfePwQwlmTE3gWpPKm_p96d9MOOeguhM3J_UoONoScInn8JHmhhu4FHAA_sTmJ3ABMfTqeixBIgF_4KVkUyQBgGgBi7YBgKAB9WGydYEiAcBkAcCmAcBqAfZtrECqAeOzhuoB5PYG6gH7paxAqgH_p6xAqgHpKOxAqgH1ckbqAemvhuoB5oGqAfz0RuoB5bYG6gHqpuxAqgHg62xAqgH_56xAqgH35-xAtgHAKAI3789sAgC0ggXCAAQAhhKMgEAOgef0ICAgIAESL39wTqxCZpqYs2dVt--gAoCmAsByAsBgAwBqg0CR1TIDQG4E5wb2BMKghQpGidtb2JpbGVhcHA6OjItY29tLnZpZGVvZWRpdG9ycHJvLmFuZHJvaWTQFQGYFgH4FgGAFwE&amp;ae=2&amp;gclid=Cj0KCQjw3JanBhCPARIsAJpXTx729AD31eZH1zcfVwyAzX7suzAe4IFgNA1oNvnxa0k11qr32po2lc0aAmTeEALw_wcB&amp;num=1&amp;cid=CAQSmAEAaQJSVuRpej4n8Ucmemi8a5tqwbnUFP84axQglMVcXIWklIN3EwpAiPWArHB6A1n4QCaTWoKI_WicAT7APkBYxPaQ6t8ubTa_Ul5ljF2ASMvXv7Dgd9C7ChRHJvn81t-Vs6949x_oa1DEJ_8jR35QMsmBJ6GEC1XWX7oOzh-vcoJHR21HQtVVeyZckOHAgFWCSYKY3xUZyhgB&amp;sig=AOD64_1K9EaUhhsnsiYO4rl98wteBMdmqA&amp;client=ca-app-pub-8875595947162677&amp;rf=1&amp;nb=8&amp;nx=356&amp;ny=749&amp;mb=1&amp;nb=8&amp;dct=1&amp;adurl=https://zigi.app/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 44
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Subdomain Depth Check | +12 | The host contains several subdomain levels.
+  - URL Structure | Long URL | +12 | The URL contains 1408 characters.
+  - URL Structure | Large query parameter set | +8 | The URL contains 16 query parameters.
+  - URL Structure | High structural complexity | +6 | The URL contains 69 structural delimiter characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.98 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[54] PG-0785
+URL: https://bridge-about.wixstudio.com/setup
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[55] PG-0539
+URL: https://startingsso-trezocdn.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[56] PG-0102
+URL: https://us16.campaign-archive.com/?e=c0454066c9&u=c674753d65594fd62c60f6b84&id=3b2b39968e
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 89 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[57] PG-0448
+URL: https://securpass-sg.com/index.php
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[58] PG-0651
+URL: https://mail-groveemail-55089.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[59] PG-0956
+URL: https://www.dropbox.com/scl/fi/5juofj4a8vpi7hkhhtbrd/BTINTERNET-ACCESS-PAGE.papert?rlkey=hglh0lk51251smk1jdfqykyfk&dl=0
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 119 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.26 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[60] PG-0847
+URL: https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WN1clNUMFBNSFU5NENVT1JYOEdOQ1BQNlRSOUEwTy4u&amp;fbclid=IwAR3waki0o-JKERmLtPYlFeDqtOWqk0jbfuaoMTmDDD9FW7iayxk00ZnvngQ
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +12 | The URL contains 205 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.64 bits per character.
+
+Brand result: The domain matches the known official domain for microsoft.
+TLS result: validated=True, score=0, error=None
+
+[61] PG-0502
+URL: https://jexliberty.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[62] PG-0623
+URL: https://generalwebb.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[63] PG-0988
+URL: https://ipfs.best-practice.se/ipfs/bafybeie6ca7ijixjhwi6ugzmszldlzrxzvz2j2o3uu7haek7vmctbsjxy4/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 95 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 4.72 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[64] PG-0711
+URL: https://olug.life/TrustForge/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 30
+Classification: FN
+
+PhishGuard evidence:
+  - TLS Certificate | Certificate Validation Check | +30 | [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)
+
+[65] PG-0677
+URL: https://s.kemkes.go.id/7nmnd2b?7234107972
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 12
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Subdomain Depth Check | +12 | The host contains several subdomain levels.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[66] PG-0179
+URL: https://eu.jotform.com/app/251812428350351
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[67] PG-0803
+URL: https://ipfs.best-practice.se/ipfs/bafybeihu5iv6dfajjltpbzf6lhsordkyevosl2t3schczwxrqsmenpshve/link.html
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 104 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 4.76 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[68] PG-0073
+URL: https://amazeproonline.wixstudio.com/300prompts
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[69] PG-0144
+URL: https://ladgr-livedesktop.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[70] PG-0401
+URL: https://etimbra.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[71] PG-0704
+URL: https://xn--contrletlphoniqueetu-i2bb1w.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 37
+Classification: FN
+
+PhishGuard evidence:
+  - International Domain | IDN/Punycode Check | +22 | The ASCII hostname contains punycode. Unicode form: contrôletéléphoniqueetu.weebly.com
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[72] PG-0927
+URL: https://ucclupdate.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: update
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[73] PG-0600
+URL: https://gorgeupdatesevrer4.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: update
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[74] PG-0799
+URL: https://allegro.ofer93201.club
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 8
+Classification: FN
+
+PhishGuard evidence:
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[75] PG-0933
+URL: https://livestart-en.wixstudio.com/usen
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[76] PG-0788
+URL: https://desktp-livelegg.wixstudio.com:443/faq-us
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[77] PG-0484
+URL: https://us15.campaign-archive.com/?u=bd4c8e287e18748b3fcadffbd&id=9f339931db
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 76 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[78] PG-0979
+URL: https://learn-bridge-treozxx.wixstudio.com/login
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Lexical Analysis | Authentication or urgency terminology | +5 | The URL contains phishing-associated terms: login
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[79] PG-0532
+URL: https://bima-mobile-aktivasi-pemulihan.edgeone.app/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[80] PG-0616
+URL: https://desktop-en-learn.wixstudio.com/ledg-en
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[81] PG-0111
+URL: https://88826345201924176473.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 11
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+  - Domain Structure | High numeric hostname content | +6 | Approximately 65% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[82] PG-0869
+URL: https://onlleeverwlseprotect.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[83] PG-0920
+URL: https://q8w2e6r1t9y3u7i4o0p5a2s80uo3uw-pq03wtbdy8.edgeone.app
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 6
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | High numeric hostname content | +6 | Approximately 32% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[84] PG-0804
+URL: https://appbridge-trexz.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[85] PG-0859
+URL: https://eu.jotform.com/app/251832964153157
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[86] PG-0930
+URL: https://universititeknologi.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[87] PG-0390
+URL: https://pyjpcoez.formester.com/f/111b4b60-4af1-4bcc-82ac-a816a740d5c8
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[88] PG-0234
+URL: https://loginacstrasbourgfrdpprofileo1cauthorize1executione1s2.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 20
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +8 | Detected lure keywords: auth, login
+  - Domain Structure | Long hostname | +7 | The hostname contains 65 characters.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[89] PG-0114
+URL: https://ia.goverty.autos/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 30
+Classification: FN
+
+PhishGuard evidence:
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[90] PG-0958
+URL: https://ipfs.best-practice.se/ipfs/bafybeifv6yzwdh3hnoar5klcu72mvfa3murdrw5qeew6ugjlwit76x3ml4/sogowa.html
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 106 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 4.91 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[91] PG-0556
+URL: https://zimbraguncelleniyor.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+GROUP RISK SUMMARY
+Minimum risk: 0
+Maximum risk: 44
+Mean risk: 8.47
+
+==============================================================================
+FALSE POSITIVES - PhishGuard flagged legitimate
+COUNT: 5
+==============================================================================
+
+[1] PG-0110
+URL: https://boxofficemojo.com
+Ground truth: LEGITIMATE
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 85
+Classification: FP
+
+PhishGuard evidence:
+  - Brand Impersonation | Known Brand Similarity Check | +85 | The domain embeds the microsoft brand name inside a non-official domain.
+
+Brand result: The domain embeds the microsoft brand name inside a non-official domain.
+TLS result: validated=True, score=0, error=None
+
+[2] PG-0322
+URL: https://googletagmanager.com
+Ground truth: LEGITIMATE
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 99
+Classification: FP
+
+PhishGuard evidence:
+  - Brand Impersonation | Known Brand Similarity Check | +85 | The domain embeds the google brand name inside a non-official domain.
+  - Brand Impersonation | Brand reference on non-official domain | +14 | Brand-related term(s) appear outside their official domain: google
+
+Brand result: The domain embeds the google brand name inside a non-official domain.
+TLS result: validated=True, score=0, error=None
+
+[3] PG-0797
+URL: https://amazontrust.com
+Ground truth: LEGITIMATE
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 99
+Classification: FP
+
+PhishGuard evidence:
+  - Brand Impersonation | Known Brand Similarity Check | +85 | The domain embeds the amazon brand name inside a non-official domain.
+  - Brand Impersonation | Brand reference on non-official domain | +14 | Brand-related term(s) appear outside their official domain: amazon
+
+Brand result: The domain embeds the amazon brand name inside a non-official domain.
+TLS result: validated=True, score=0, error=None
+
+[4] PG-0570
+URL: https://google.gm
+Ground truth: LEGITIMATE
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 100
+Classification: FP
+
+PhishGuard evidence:
+  - Brand Impersonation | Known Brand Similarity Check | +95 | The domain label appears to mimic google using character substitution.
+  - Brand Impersonation | Brand reference on non-official domain | +14 | Brand-related term(s) appear outside their official domain: google
+
+Brand result: The domain label appears to mimic google using character substitution.
+TLS result: validated=True, score=0, error=None
+
+[5] PG-0552
+URL: https://icloud-content.com
+Ground truth: LEGITIMATE
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 99
+Classification: FP
+
+PhishGuard evidence:
+  - Brand Impersonation | Known Brand Similarity Check | +85 | The domain embeds the apple brand name inside a non-official domain.
+  - Brand Impersonation | Brand reference on non-official domain | +14 | Brand-related term(s) appear outside their official domain: icloud
+
+Brand result: The domain embeds the apple brand name inside a non-official domain.
+TLS result: validated=True, score=0, error=None
+
+GROUP RISK SUMMARY
+Minimum risk: 85
+Maximum risk: 100
+Mean risk: 96.40
+
+==============================================================================
+PHISHGUARD ONLY - PhishGuard detected but Chrome did not
+COUNT: 5
+==============================================================================
+
+[1] PG-0296
+URL: http://allegrolokalnie.pl-ogloszenia-firmowe-id902430.click
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 81
+Classification: TP
+
+PhishGuard evidence:
+  - Transport Security | HTTPS Check | +18 | The URL does not use HTTPS.
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Top-Level Domain | Suspicious TLD Check | +15 | The domain uses .click, which is on the suspicious TLD list.
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[2] PG-0272
+URL: https://astroquantum.click/sparkasse/login.php
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 50
+Classification: TP
+
+PhishGuard evidence:
+  - Top-Level Domain | Suspicious TLD Check | +15 | The domain uses .click, which is on the suspicious TLD list.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Lexical Analysis | Authentication or urgency terminology | +5 | The URL contains phishing-associated terms: login
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[3] PG-0981
+URL: https://brave-teal-rooster.31-22-7-7.cpanel.site/hub/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 52
+Classification: TP
+
+PhishGuard evidence:
+  - URL Structure | Subdomain Depth Check | +12 | The host contains several subdomain levels.
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[4] PG-0358
+URL: http://allegro.871288igiru7.shop
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 77
+Classification: TP
+
+PhishGuard evidence:
+  - Transport Security | HTTPS Check | +18 | The URL does not use HTTPS.
+  - Top-Level Domain | Suspicious TLD Check | +15 | The domain uses .shop, which is on the suspicious TLD list.
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Domain Structure | High numeric hostname content | +6 | Approximately 28% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[5] PG-0196
+URL: https://applemymusic.com/captcha.php
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: BLOCK
+Frozen PhishGuard risk: 100
+Classification: TP
+
+PhishGuard evidence:
+  - Brand Impersonation | Known Brand Similarity Check | +85 | The domain embeds the apple brand name inside a non-official domain.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Brand Impersonation | Brand reference on non-official domain | +14 | Brand-related term(s) appear outside their official domain: apple
+
+Brand result: The domain embeds the apple brand name inside a non-official domain.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+GROUP RISK SUMMARY
+Minimum risk: 50
+Maximum risk: 100
+Mean risk: 72.00
+
+==============================================================================
+BOTH DETECTED - Chrome and PhishGuard detected
+COUNT: 4
+==============================================================================
+
+[1] PG-0378
+URL: https://allegrolokalnie.pl-598012845.lat/oferta/50443652/odkurzacz-pioracy-karcher-puzzi-10-1
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 48
+Classification: TP
+
+PhishGuard evidence:
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - URL Structure | Long URL | +4 | The URL contains 93 characters.
+  - Domain Structure | High numeric hostname content | +6 | Approximately 28% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[2] PG-0526
+URL: http://nodu1718.odns.fr/sjssjdj/alibaba
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 54
+Classification: TP
+
+PhishGuard evidence:
+  - Transport Security | HTTPS Check | +18 | The URL does not use HTTPS.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Domain Structure | High numeric hostname content | +6 | Approximately 25% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[3] PG-0205
+URL: http://allegro.89015.lat/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 62
+Classification: TP
+
+PhishGuard evidence:
+  - Transport Security | HTTPS Check | +18 | The URL does not use HTTPS.
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Domain Structure | High numeric hostname content | +6 | Approximately 29% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+[4] PG-0723
+URL: https://klelnanzeigen-deutsch.id5820.info/getpaymentm/267316711/m9
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: WARN
+Frozen PhishGuard risk: 58
+Classification: TP
+
+PhishGuard evidence:
+  - Top-Level Domain | Suspicious TLD Check | +15 | The domain uses .info, which is on the suspicious TLD list.
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+  - Lexical Analysis | Authentication or urgency terminology | +5 | The URL contains phishing-associated terms: payment
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+GROUP RISK SUMMARY
+Minimum risk: 48
+Maximum risk: 62
+Mean risk: 55.50
+
+==============================================================================
+CHROME ONLY - Chrome detected but PhishGuard did not
+COUNT: 27
+==============================================================================
+
+[1] PG-0077
+URL: https://xfinityyycomcastloginn.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: login
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[2] PG-0567
+URL: https://us7.campaign-archive.com/?u=eed2b00d4c76b5d4dd3d80cb0&id=4c0e6f586b
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 75 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[3] PG-0076
+URL: https://promotion2025.z7.web.core.windows.net/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 12
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Subdomain Depth Check | +12 | The host contains several subdomain levels.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[4] PG-0116
+URL: https://did.li/KougT
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[5] PG-0962
+URL: https://u58318934.ct.eu.sendgrid.net/ls/click?upn=u001.rTDvdKINTd6xm0TqIVyXJAXCcf1EFroENlkKbR042TIoWY478R7ofU5K65vWs1ejSLPXj0ERZ9OlkUnzH53bwCfISydff0cy5pSU3v-2F5ZPbRBDtgVUFsr2pj6iHBRonXEcZERTIJTiSQn-2B3Ee-2Fo1CjP6EKbYiRGrfHaYBXsdlLo-3DZZVB_nGQDzkuAQnN7sgIPNIql1L0SgUa7z3mRcEYh-2BZDGGJWhWKekNRVJk-2BshxL48KRGqdEUxyafLQOZmopehVyuxtPbHpl2bNoHEmq956HMtqKn0ZXoD2aL-2FEjHSMYag-2B5-2FFr1oj0uGgf1aLyPsMJMuTtc0I3vg-2BkwwO9xBWA6OZQ-2B50xMejGZhndPb-2BV2KhGq4Hrp2DqDSW-2B-2FUW33Al7B-2BDEzBieytwLMsyf2jVmKJjudNkedxesQr8AAgGJdSUMjYVYSLICJgOiK59GQqe9RfxMGcee-2BTRs4CU7L49noYLYZFCT1eL-2BhuosCLv7E8klsCYA76kWlVpHHv7NxyaQnxFZPp1mX0zKNnzc9Px8ip8bavY5v7B5F8gwYjrhb-2B7y-2FLrkRzM8GQO1r1GIXyD-2B57tF-2ByY81VmBIVcGFZwoPdZdQZ2eegroAqKdUM9Z1D-2Fw0jCUvhm-2BtwDsfupORha-2BB1am4r896PrIh8ftzK-2FGidnJE-2By0ly7U6sAwWKyBCLeBrVyiaSCzyJVEkbONYzx52SoqDRJ9w6a13j2qeRstMG7CEGNsU67LEZcxNiEWvdfhtfOuwu6Nz-2Be2vr1o36Hb9-2BvzFhxpa79-2BwxXFPMoASkPRtsWGmFd6vF9xUqYcz909DPDmPwCfzkivXbnwbasVU4bh8xkkXL1QXD-2FJ6p7RFDvApU-3D#4SHIKi1193tjHH78lkqsezouzt93OYDNARRFAYDLSTZ197550TQHH26636x1
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 42
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Subdomain Depth Check | +12 | The host contains several subdomain levels.
+  - URL Structure | Long URL | +12 | The URL contains 1039 characters.
+  - URL Structure | High structural complexity | +6 | The URL contains 38 structural delimiter characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.93 bits per character.
+  - Domain Structure | High numeric hostname content | +6 | Approximately 29% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[6] PG-0924
+URL: https://weblinkupdateunacheduec.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: update
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[7] PG-0523
+URL: https://www.dropbox.com/scl/fi/f5g9ogchna9kffy3peid0/British-Telecommunication.paper?rlkey=8rbz4v7d2x7o8nzru7f8tidi9&dl=0
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 14
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +8 | The URL contains 121 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.00 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[8] PG-0051
+URL: https://app.jotform.com/251676275174565
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[9] PG-0603
+URL: http://www.dropbox.com/scl/fi/ef47nqebgnui5shjd9uzv/2024-BTINTERNET-VERIFICATION-BELOW.paper?rlkey=xd1cv3lnxvsfs0es2el099z4x&dl=0
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 37
+Classification: FN
+
+PhishGuard evidence:
+  - Transport Security | HTTPS Check | +18 | The URL does not use HTTPS.
+  - URL Structure | Long URL | +8 | The URL contains 129 characters.
+  - Lexical Analysis | Authentication or urgency terminology | +5 | The URL contains phishing-associated terms: verification
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.35 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[10] PG-0432
+URL: https://micro-metamask.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[11] PG-0290
+URL: https://sign-in-to-xfinity-loginss.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 19
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: login
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[12] PG-0644
+URL: https://adclick.g.doubleclick.net/aclk?sa=l&amp;ai=C_tcvLGPmZLLzI-j5zLUPx5utuA-A8KyUcsWVhpLOEfWN_MIDEAEgo6aKdmDBgtoDoAG9h5DmKcgBCagDAcgDigSYBAiqBK4CT9DbBzt6PxXVD46iXaw6-iLmJM69Oj2brlt-RuYRyJTxnOGUfgIjQudrYePQPnwlR4tHLQ4XXIbXawZOHXK3WADFdIDT3wTzs36rbI23LC0zqintjo-3VKEvtoX3RPeEu1PwCOT1glPu2wz3PQprQ795o5wovygeGIvrVWOEHJ6WNvyXYWDTk9dQmtMdmUcuA9htqy_CGWf1JCrVk3_00NhrNnCRgDV4v6Si_GlX_fzEArxhu2x8YNfZke-fi-C8FyjrPnAKvcRzC0aSYzuNrlvbapmI2jpOxKX7K_fgLFb6vuaoSfkpE3btRsRLC9Wav5hCuvyhL5rbDb9zQk1UTfePwQwlmTE3gWpPKm_p96d9MOOeguhM3J_UoONoScInn8JHmhhu4FHAA_sTmJ3ABMfTqeixBIgF_4KVkUyQBgGgBi7YBgKAB9WGydYEiAcBkAcCmAcBqAfZtrECqAeOzhuoB5PYG6gH7paxAqgH_p6xAqgHpKOxAqgH1ckbqAemvhuoB5oGqAfz0RuoB5bYG6gHqpuxAqgHg62xAqgH_56xAqgH35-xAtgHAKAI3789sAgC0ggXCAAQAhhKMgEAOgef0ICAgIAESL39wTqxCZpqYs2dVt--gAoCmAsByAsBgAwBqg0CR1TIDQG4E5wb2BMKghQpGidtb2JpbGVhcHA6OjItY29tLnZpZGVvZWRpdG9ycHJvLmFuZHJvaWTQFQGYFgH4FgGAFwE&amp;ae=2&amp;gclid=Cj0KCQjw3JanBhCPARIsAJpXTx729AD31eZH1zcfVwyAzX7suzAe4IFgNA1oNvnxa0k11qr32po2lc0aAmTeEALw_wcB&amp;num=1&amp;cid=CAQSmAEAaQJSVuRpej4n8Ucmemi8a5tqwbnUFP84axQglMVcXIWklIN3EwpAiPWArHB6A1n4QCaTWoKI_WicAT7APkBYxPaQ6t8ubTa_Ul5ljF2ASMvXv7Dgd9C7ChRHJvn81t-Vs6949x_oa1DEJ_8jR35QMsmBJ6GEC1XWX7oOzh-vcoJHR21HQtVVeyZckOHAgFWCSYKY3xUZyhgB&amp;sig=AOD64_1K9EaUhhsnsiYO4rl98wteBMdmqA&amp;client=ca-app-pub-8875595947162677&amp;rf=1&amp;nb=8&amp;nx=356&amp;ny=749&amp;mb=1&amp;nb=8&amp;dct=1&amp;adurl=https://zigi.app/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 44
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Subdomain Depth Check | +12 | The host contains several subdomain levels.
+  - URL Structure | Long URL | +12 | The URL contains 1408 characters.
+  - URL Structure | Large query parameter set | +8 | The URL contains 16 query parameters.
+  - URL Structure | High structural complexity | +6 | The URL contains 69 structural delimiter characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.98 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[13] PG-0847
+URL: https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__WN1clNUMFBNSFU5NENVT1JYOEdOQ1BQNlRSOUEwTy4u&amp;fbclid=IwAR3waki0o-JKERmLtPYlFeDqtOWqk0jbfuaoMTmDDD9FW7iayxk00ZnvngQ
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +12 | The URL contains 205 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.64 bits per character.
+
+Brand result: The domain matches the known official domain for microsoft.
+TLS result: validated=True, score=0, error=None
+
+[14] PG-0502
+URL: https://jexliberty.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[15] PG-0623
+URL: https://generalwebb.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[16] PG-0711
+URL: https://olug.life/TrustForge/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 30
+Classification: FN
+
+PhishGuard evidence:
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 54] Connection reset by peer
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 54] Connection reset by peer
+
+[17] PG-0677
+URL: https://s.kemkes.go.id/7nmnd2b?7234107972
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 12
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Subdomain Depth Check | +12 | The host contains several subdomain levels.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[18] PG-0803
+URL: https://ipfs.best-practice.se/ipfs/bafybeihu5iv6dfajjltpbzf6lhsordkyevosl2t3schczwxrqsmenpshve/link.html
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 104 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 4.76 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[19] PG-0144
+URL: https://ladgr-livedesktop.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[20] PG-0401
+URL: https://etimbra.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[21] PG-0979
+URL: https://learn-bridge-treozxx.wixstudio.com/login
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Lexical Analysis | Authentication or urgency terminology | +5 | The URL contains phishing-associated terms: login
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[22] PG-0532
+URL: https://bima-mobile-aktivasi-pemulihan.edgeone.app/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[23] PG-0616
+URL: https://desktop-en-learn.wixstudio.com/ledg-en
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[24] PG-0111
+URL: https://88826345201924176473.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 11
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+  - Domain Structure | High numeric hostname content | +6 | Approximately 65% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[25] PG-0234
+URL: https://loginacstrasbourgfrdpprofileo1cauthorize1executione1s2.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 20
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +8 | Detected lure keywords: auth, login
+  - Domain Structure | Long hostname | +7 | The hostname contains 65 characters.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[26] PG-0958
+URL: https://ipfs.best-practice.se/ipfs/bafybeifv6yzwdh3hnoar5klcu72mvfa3murdrw5qeew6ugjlwit76x3ml4/sogowa.html
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 106 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 4.91 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[27] PG-0556
+URL: https://zimbraguncelleniyor.weebly.com/
+Ground truth: PHISHING
+Chrome detected: YES
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+GROUP RISK SUMMARY
+Minimum risk: 0
+Maximum risk: 44
+Mean risk: 12.33
+
+==============================================================================
+NEITHER DETECTED - Both missed phishing
+COUNT: 64
+==============================================================================
+
+[1] PG-0850
+URL: https://xn--2n1b810a1er8ivvcx0yyhc.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 37
+Classification: FN
+
+PhishGuard evidence:
+  - International Domain | IDN/Punycode Check | +22 | The ASCII hostname contains punycode. Unicode form: 시스템업데이트.weebly.com
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[2] PG-0777
+URL: https://www.dropbox.com/scl/fi/9x7kn4jsqd8q4z07hq1i9/Your-Latest-Bill-Is-Ready.paper?rlkey=zwbd8jod63ubmt8e1b929g6hr&st=qw7ogpqz&dl=0
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 14
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +8 | The URL contains 133 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.26 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[3] PG-0293
+URL: https://bridgeenus.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[4] PG-0553
+URL: https://www.dropbox.com/l/AADMvvP6HzkDd5QFQPKcs5vUwVE8SmTeKvQ/privacy
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 6
+Classification: FN
+
+PhishGuard evidence:
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 4.80 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[5] PG-0093
+URL: https://trezo-home.framer.media/cdn-wallet
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Lexical Analysis | Authentication or urgency terminology | +5 | The URL contains phishing-associated terms: wallet
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[6] PG-0047
+URL: https://junowebmail01.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[7] PG-0647
+URL: https://wmailzzkrzjkut5999.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[8] PG-0106
+URL: https://us6.campaign-archive.com/?u=24d1b23905a7794382975f490&id=9cc8c8c0b9
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 75 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[9] PG-0268
+URL: https://onnlineepaay.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[10] PG-0468
+URL: https://justice-gov-za.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[11] PG-0308
+URL: https://kleinanzeigen.nmgdfjd.com/142325909?mail=W1BPTFlBXQ==&meta=rlWjMKWwLJ50LJqyVwb1YPWhLJ1yVwbvKUIxBQAwKUIxMwZ4VSOioUyuVR1unJkypvVfVzAbLKEsnJDvBv0kZQNmBGH4ZQxmAGp1YPWmMKW2nJAyVwbvn2kynJ5uoacynJqyovVfVaE5pTHvBvWjo2k5LI9gLJyfMKVvsD==
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 18
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +12 | The URL contains 235 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.59 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[12] PG-0217
+URL: https://publictrezorsuite.wixstudio.com/suite-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[13] PG-0694
+URL: https://gmxxms.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[14] PG-0872
+URL: https://en-ledgrcdn.wixstudio.com:443/live-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[15] PG-0138
+URL: https://signinwebb0.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: signin
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[16] PG-0827
+URL: https://m--portal--uphld--autth--m.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[17] PG-0375
+URL: https://connect-suiteapp.wixstudio.com/en-us
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[18] PG-0807
+URL: https://eu.jotform.com/app/251920909377869
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[19] PG-0617
+URL: https://www.dropbox.com/scl/fi/55t4cn1aboodqoci1y2n7/UPDATE-BT-SECURITY-SERVICE.papert?rlkey=kp4d6xq1ryp33q3rg1p7fvwzm&dl=0
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 24
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +8 | The URL contains 123 characters.
+  - Lexical Analysis | Authentication or urgency terminology | +10 | The URL contains phishing-associated terms: security, update
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.43 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[20] PG-0890
+URL: https://catalystbank.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[21] PG-0586
+URL: https://bhd2026loginlia001.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: login
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[22] PG-0813
+URL: https://nic-uniza-sk.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[23] PG-0202
+URL: https://bradesco.chatnetempresas.click/inicio
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Top-Level Domain | Suspicious TLD Check | +15 | The domain uses .click, which is on the suspicious TLD list.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[24] PG-0527
+URL: https://cnlin0-apgfcu-1uux-aspx.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[25] PG-0361
+URL: https://www.dropbox.com/l/scl/AABduUn0uPi4kaLbBKRWENK3oG2zg7NZHYQ
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 6
+Classification: FN
+
+PhishGuard evidence:
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 4.99 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[26] PG-0596
+URL: https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAHHxMtdUMzcwRDJIOVI4NVpLWFUyVTdBSFNOOFdNVC4u
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +8 | The URL contains 132 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.17 bits per character.
+
+Brand result: The domain matches the known official domain for microsoft.
+TLS result: validated=True, score=0, error=None
+
+[27] PG-0922
+URL: https://us6.campaign-archive.com/?u=d8e9ad3c1a7609f1584a66227&id=edd9a4eac0
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 75 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[28] PG-0545
+URL: https://informacion-suscripcion.com/captcha.php
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[29] PG-0372
+URL: https://lgderlive-portfolio.wixstudio.com/live
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[30] PG-0067
+URL: https://blluuepeak.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[31] PG-0065
+URL: https://bridge-tre.wixstudio.com/trezor-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[32] PG-0301
+URL: https://activarcuentabhd-validacionusuario.weebly.com
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[33] PG-0097
+URL: https://us5.campaign-archive.com/?u=4b64b000a63ae29b59b11a3da&id=a9bce0df2e
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 75 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[34] PG-0715
+URL: https://clee-securite.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[35] PG-0016
+URL: https://vnvnvnvnvnvnvnvncnnsnn.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[36] PG-0709
+URL: https://web859869383.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 11
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+  - Domain Structure | High numeric hostname content | +6 | Approximately 39% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[37] PG-0219
+URL: https://azcorpdaaauummmkaoakaoaakaoaoaoaoako.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[38] PG-0385
+URL: https://cmcomcast2025.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[39] PG-0282
+URL: https://conxm.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[40] PG-0294
+URL: https://redirect63.wixsite.com/my-site-3
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under wixsite.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[41] PG-0942
+URL: https://eu.jotform.com/app/252063174360349
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[42] PG-0785
+URL: https://bridge-about.wixstudio.com/setup
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[43] PG-0539
+URL: https://startingsso-trezocdn.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[44] PG-0102
+URL: https://us16.campaign-archive.com/?e=c0454066c9&u=c674753d65594fd62c60f6b84&id=3b2b39968e
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 89 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[45] PG-0448
+URL: https://securpass-sg.com/index.php
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[46] PG-0651
+URL: https://mail-groveemail-55089.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 15
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[47] PG-0956
+URL: https://www.dropbox.com/scl/fi/5juofj4a8vpi7hkhhtbrd/BTINTERNET-ACCESS-PAGE.papert?rlkey=hglh0lk51251smk1jdfqykyfk&dl=0
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 119 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 5.26 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[48] PG-0988
+URL: https://ipfs.best-practice.se/ipfs/bafybeie6ca7ijixjhwi6ugzmszldlzrxzvz2j2o3uu7haek7vmctbsjxy4/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 10
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 95 characters.
+  - Lexical Analysis | High character entropy | +6 | The path/query entropy is 4.72 bits per character.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[49] PG-0179
+URL: https://eu.jotform.com/app/251812428350351
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[50] PG-0073
+URL: https://amazeproonline.wixstudio.com/300prompts
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[51] PG-0704
+URL: https://xn--contrletlphoniqueetu-i2bb1w.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 37
+Classification: FN
+
+PhishGuard evidence:
+  - International Domain | IDN/Punycode Check | +22 | The ASCII hostname contains punycode. Unicode form: contrôletéléphoniqueetu.weebly.com
+  - Domain Structure | Hyphen Density Check | +10 | The domain contains multiple hyphens.
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[52] PG-0927
+URL: https://ucclupdate.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: update
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[53] PG-0600
+URL: https://gorgeupdatesevrer4.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 9
+Classification: FN
+
+PhishGuard evidence:
+  - Phishing Language | Lure Keyword Check | +4 | Detected lure keywords: update
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[54] PG-0799
+URL: https://allegro.ofer93201.club
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 8
+Classification: FN
+
+PhishGuard evidence:
+  - Typosquatting | Digit Substitution Check | +8 | The domain label contains numeric substitutions.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[55] PG-0933
+URL: https://livestart-en.wixstudio.com/usen
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[56] PG-0788
+URL: https://desktp-livelegg.wixstudio.com:443/faq-us
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[57] PG-0484
+URL: https://us15.campaign-archive.com/?u=bd4c8e287e18748b3fcadffbd&id=9f339931db
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 4
+Classification: FN
+
+PhishGuard evidence:
+  - URL Structure | Long URL | +4 | The URL contains 76 characters.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[58] PG-0869
+URL: https://onlleeverwlseprotect.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[59] PG-0920
+URL: https://q8w2e6r1t9y3u7i4o0p5a2s80uo3uw-pq03wtbdy8.edgeone.app
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 6
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | High numeric hostname content | +6 | Approximately 32% of the hostname consists of digits.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[60] PG-0804
+URL: https://appbridge-trexz.wixstudio.com/us-en
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[61] PG-0859
+URL: https://eu.jotform.com/app/251832964153157
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[62] PG-0930
+URL: https://universititeknologi.weebly.com/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 5
+Classification: FN
+
+PhishGuard evidence:
+  - Domain Structure | Shared hosting platform | +5 | The site is hosted under weebly.com.
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[63] PG-0390
+URL: https://pyjpcoez.formester.com/f/111b4b60-4af1-4bcc-82ac-a816a740d5c8
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 0
+Classification: FN
+
+PhishGuard evidence: NONE
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=True, score=0, error=None
+
+[64] PG-0114
+URL: https://ia.goverty.autos/
+Ground truth: PHISHING
+Chrome detected: NO
+Frozen PhishGuard decision: ALLOW
+Frozen PhishGuard risk: 30
+Classification: FN
+
+PhishGuard evidence:
+  - TLS Certificate | Certificate Validation Check | +30 | [Errno 8] nodename nor servname provided, or not known
+
+Brand result: No strong brand similarity detected.
+TLS result: validated=False, score=30, error=[Errno 8] nodename nor servname provided, or not known
+
+GROUP RISK SUMMARY
+Minimum risk: 0
+Maximum risk: 37
+Mean risk: 6.84
+
+==============================================================================
+AGGREGATED INDICATOR ANALYSIS
+==============================================================================
+
+TRUE POSITIVES - PhishGuard detected phishing
+------------------------------------------------------------------------------
+Evidence categories:
+  TLS Certificate: 9
+  Domain Structure: 6
+  Typosquatting: 5
+  Transport Security: 4
+  Top-Level Domain: 4
+  Lexical Analysis: 2
+  URL Structure: 2
+  Brand Impersonation: 2
+
+Specific tests:
+  Certificate Validation Check: 9
+  Digit Substitution Check: 5
+  HTTPS Check: 4
+  Suspicious TLD Check: 4
+  High numeric hostname content: 4
+  Hyphen Density Check: 2
+  Authentication or urgency terminology: 2
+  Subdomain Depth Check: 1
+  Known Brand Similarity Check: 1
+  Brand reference on non-official domain: 1
+  Long URL: 1
+
+FALSE NEGATIVES - PhishGuard missed phishing
+------------------------------------------------------------------------------
+Evidence categories:
+  Domain Structure: 50
+  URL Structure: 26
+  NO EVIDENCE: 25
+  Lexical Analysis: 19
+  Phishing Language: 8
+  International Domain: 2
+  TLS Certificate: 2
+  Top-Level Domain: 1
+  Transport Security: 1
+  Typosquatting: 1
+
+Specific tests:
+  Shared hosting platform: 34
+  NO EVIDENCE: 25
+  Long URL: 19
+  High character entropy: 15
+  Hyphen Density Check: 11
+  Lure Keyword Check: 8
+  Authentication or urgency terminology: 4
+  High numeric hostname content: 4
+  Subdomain Depth Check: 4
+  IDN/Punycode Check: 2
+  High structural complexity: 2
+  Certificate Validation Check: 2
+  Suspicious TLD Check: 1
+  HTTPS Check: 1
+  Large query parameter set: 1
+  Digit Substitution Check: 1
+  Long hostname: 1
+
+FALSE POSITIVES - PhishGuard flagged legitimate
+------------------------------------------------------------------------------
+Evidence categories:
+  Brand Impersonation: 9
+
+Specific tests:
+  Known Brand Similarity Check: 5
+  Brand reference on non-official domain: 4
+
+PHISHGUARD ONLY - PhishGuard detected but Chrome did not
+------------------------------------------------------------------------------
+Evidence categories:
+  TLS Certificate: 5
+  Domain Structure: 3
+  Top-Level Domain: 3
+  Transport Security: 2
+  Typosquatting: 2
+  Brand Impersonation: 2
+  Lexical Analysis: 1
+  URL Structure: 1
+
+Specific tests:
+  Certificate Validation Check: 5
+  Suspicious TLD Check: 3
+  HTTPS Check: 2
+  Hyphen Density Check: 2
+  Digit Substitution Check: 2
+  Authentication or urgency terminology: 1
+  Subdomain Depth Check: 1
+  High numeric hostname content: 1
+  Known Brand Similarity Check: 1
+  Brand reference on non-official domain: 1
+
+BOTH DETECTED - Chrome and PhishGuard detected
+------------------------------------------------------------------------------
+Evidence categories:
+  TLS Certificate: 4
+  Typosquatting: 3
+  Domain Structure: 3
+  Transport Security: 2
+  URL Structure: 1
+  Top-Level Domain: 1
+  Lexical Analysis: 1
+
+Specific tests:
+  Certificate Validation Check: 4
+  Digit Substitution Check: 3
+  High numeric hostname content: 3
+  HTTPS Check: 2
+  Long URL: 1
+  Suspicious TLD Check: 1
+  Authentication or urgency terminology: 1
+
+CHROME ONLY - Chrome detected but PhishGuard did not
+------------------------------------------------------------------------------
+Evidence categories:
+  Domain Structure: 15
+  URL Structure: 15
+  Lexical Analysis: 9
+  NO EVIDENCE: 5
+  Phishing Language: 4
+  Transport Security: 1
+  TLS Certificate: 1
+
+Specific tests:
+  Shared hosting platform: 8
+  Long URL: 8
+  High character entropy: 7
+  NO EVIDENCE: 5
+  Lure Keyword Check: 4
+  Subdomain Depth Check: 4
+  Hyphen Density Check: 4
+  High structural complexity: 2
+  High numeric hostname content: 2
+  Authentication or urgency terminology: 2
+  HTTPS Check: 1
+  Large query parameter set: 1
+  Certificate Validation Check: 1
+  Long hostname: 1
+
+NEITHER DETECTED - Both missed phishing
+------------------------------------------------------------------------------
+Evidence categories:
+  Domain Structure: 35
+  NO EVIDENCE: 20
+  URL Structure: 11
+  Lexical Analysis: 10
+  Phishing Language: 4
+  International Domain: 2
+  Top-Level Domain: 1
+  Typosquatting: 1
+  TLS Certificate: 1
+
+Specific tests:
+  Shared hosting platform: 26
+  NO EVIDENCE: 20
+  Long URL: 11
+  High character entropy: 8
+  Hyphen Density Check: 7
+  Lure Keyword Check: 4
+  IDN/Punycode Check: 2
+  Authentication or urgency terminology: 2
+  High numeric hostname content: 2
+  Suspicious TLD Check: 1
+  Digit Substitution Check: 1
+  Certificate Validation Check: 1
+
+==============================================================================
+FALSE NEGATIVE RISK DISTRIBUTION
+==============================================================================
+Risk 0: 27
+Risk 4: 6
+Risk 5: 18
+Risk 6: 3
+Risk 8: 1
+Risk 9: 6
+Risk 10: 6
+Risk 11: 2
+Risk 12: 2
+Risk 14: 2
+Risk 15: 7
+Risk 18: 1
+Risk 19: 1
+Risk 20: 1
+Risk 24: 1
+Risk 30: 2
+Risk 37: 3
+Risk 42: 1
+Risk 44: 1
+
+==============================================================================
+FALSE NEGATIVES WITH ZERO DETECTED EVIDENCE
+==============================================================================
+PG-0293 | risk 0 | https://bridgeenus.wixstudio.com/us-en
+PG-0217 | risk 0 | https://publictrezorsuite.wixstudio.com/suite-en
+PG-0872 | risk 0 | https://en-ledgrcdn.wixstudio.com:443/live-en
+PG-0375 | risk 0 | https://connect-suiteapp.wixstudio.com/en-us
+PG-0807 | risk 0 | https://eu.jotform.com/app/251920909377869
+PG-0545 | risk 0 | https://informacion-suscripcion.com/captcha.php
+PG-0372 | risk 0 | https://lgderlive-portfolio.wixstudio.com/live
+PG-0065 | risk 0 | https://bridge-tre.wixstudio.com/trezor-en
+PG-0715 | risk 0 | https://clee-securite.com/
+PG-0116 | risk 0 | https://did.li/KougT
+PG-0942 | risk 0 | https://eu.jotform.com/app/252063174360349
+PG-0051 | risk 0 | https://app.jotform.com/251676275174565
+PG-0432 | risk 0 | https://micro-metamask.wixstudio.com/us-en
+PG-0785 | risk 0 | https://bridge-about.wixstudio.com/setup
+PG-0539 | risk 0 | https://startingsso-trezocdn.wixstudio.com/us-en
+PG-0448 | risk 0 | https://securpass-sg.com/index.php
+PG-0502 | risk 0 | https://jexliberty.wixstudio.com/us-en
+PG-0179 | risk 0 | https://eu.jotform.com/app/251812428350351
+PG-0073 | risk 0 | https://amazeproonline.wixstudio.com/300prompts
+PG-0144 | risk 0 | https://ladgr-livedesktop.wixstudio.com/us-en
+PG-0933 | risk 0 | https://livestart-en.wixstudio.com/usen
+PG-0788 | risk 0 | https://desktp-livelegg.wixstudio.com:443/faq-us
+PG-0804 | risk 0 | https://appbridge-trexz.wixstudio.com/us-en
+PG-0859 | risk 0 | https://eu.jotform.com/app/251832964153157
+PG-0390 | risk 0 | https://pyjpcoez.formester.com/f/111b4b60-4af1-4bcc-82ac-a816a740d5c8
+
+Total false negatives with no evidence: 25

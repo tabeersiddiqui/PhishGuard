@@ -1,0 +1,75 @@
+========================================================================
+PHISHGUARD H4 LOCAL-ANALYSIS / NETWORK-DEPENDENCY EXPERIMENT
+========================================================================
+
+Dataset: phishguard_dataset_validation.csv
+Observations: 200
+Threat intelligence: OFF in both conditions
+
+CONDITION A - NETWORK-CAPABLE
+------------------------------------------------------------------------
+Local multi-indicator analysis: ON
+TLS destination inspection: ON
+Errors: 0
+TP: 13
+TN: 95
+FP: 5
+FN: 87
+Accuracy: 54.00%
+Precision: 72.22%
+Recall: 13.00%
+F1-score: 22.03%
+FPR: 5.00%
+FNR: 87.00%
+Mean latency: 397.503 ms
+Median latency: 101.374 ms
+System bytes sent during condition: 328704
+System bytes received during condition: 954368
+
+CONDITION B - CONTROLLED LOCAL-ONLY
+------------------------------------------------------------------------
+Local multi-indicator analysis: ON
+TLS destination inspection: OFF
+Errors: 0
+TP: 7
+TN: 95
+FP: 5
+FN: 93
+Accuracy: 51.00%
+Precision: 58.33%
+Recall: 7.00%
+F1-score: 12.50%
+FPR: 5.00%
+FNR: 93.00%
+Mean latency: 0.801 ms
+Median latency: 0.852 ms
+System bytes sent during condition: 0
+System bytes received during condition: 1024
+
+PAIRED FUNCTIONAL CONTINUITY
+------------------------------------------------------------------------
+Same ALLOW/WARN/BLOCK decision: 194/200 (97.00%)
+Different decision: 6/200
+Network WARN/BLOCK -> Local ALLOW: 6
+Network ALLOW -> Local WARN/BLOCK: 0
+
+DESCRIPTIVE NETWORK OBSERVATION
+------------------------------------------------------------------------
+Condition A total observed system network bytes: 1283072
+Condition B total observed system network bytes: 1024
+
+Network counters are system-wide interface counters and cannot be attributed exclusively to the PhishGuard process.
+The controlled local-only TLS replacement itself performs no socket or destination-host connection.
+
+INTERPRETATION BOUNDARY
+------------------------------------------------------------------------
+This experiment evaluates whether PhishGuard's local detection functions continue to produce classifications when destination-dependent TLS inspection is unavailable.
+It does not establish that the complete application is fully offline, nor does it claim zero operating-system or unrelated network traffic.
+Threat-intelligence matching is intentionally excluded from both conditions to isolate local analysis and TLS dependency.
+
+========================================================================
+H4 EXPERIMENT COMPLETE
+========================================================================
+
+Detailed results: h4_local_analysis_results.csv
+Summary: h4_local_analysis_summary.txt

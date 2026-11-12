@@ -1,0 +1,62 @@
+PHISHGUARD 1,000-SITE RESEARCH TEST
+===================================
+
+DATASET
+-------
+Total observations:       1000
+Legitimate:               500
+Phishing:                 500
+Processing errors:        0
+
+RAW PHISHGUARD DECISIONS
+------------------------
+ALLOW:                    962
+WARN:                     4
+BLOCK:                    34
+
+PRIMARY BINARY ANALYSIS
+-----------------------
+WARN + BLOCK = PHISHING
+ALLOW        = LEGITIMATE
+
+CONFUSION MATRIX
+----------------
+True Positives (TP):      12
+True Negatives (TN):      474
+False Positives (FP):     26
+False Negatives (FN):     488
+
+CLASSIFICATION METRICS
+----------------------
+Accuracy:                 48.60%
+Precision:                31.58%
+Recall / Sensitivity:     2.40%
+F1 Score:                 4.46%
+False Positive Rate:      5.20%
+False Negative Rate:      97.60%
+
+PERFORMANCE
+-----------
+Total processing time:    0.811 seconds
+Mean analysis latency:    0.804 ms
+Median latency:           0.800 ms
+95th percentile latency:  1.086 ms
+
+Starting memory:          101.406 MB
+Ending memory:            102.484 MB
+Peak memory:              102.484 MB
+Approx. process CPU:      99.50%
+
+EXPERIMENTAL MODE
+-----------------
+Browser navigation:       DISABLED
+Web page rendering:       DISABLED
+TLS network validation:   DISABLED
+
+This test evaluates the local URL, domain structure, lexical,
+brand-impersonation, typosquatting, internationalized-domain,
+keyword, and weighted-risk components of PhishGuard.
+
+TLS validation should be evaluated separately in a controlled
+experimental environment before reporting final full-system
+performance.

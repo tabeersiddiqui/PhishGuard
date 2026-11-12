@@ -1,0 +1,128 @@
+========================================================================
+PHISHGUARD H2 DEVELOPMENT EXPERIMENT
+========================================================================
+
+Dataset: phishguard_dataset_development.csv
+Successful observations: 600
+Errors: 0
+
+Primary binary rule: WARN/BLOCK = phishing detection
+ALLOW = legitimate prediction
+Threat-intelligence matching: OFF
+TLS analysis: ON
+WARN threshold: 45
+BLOCK threshold: 70
+
+========================================================================
+A_URL_DOMAIN
+========================================================================
+TP: 3
+TN: 299
+FP: 1
+FN: 297
+
+Accuracy:  50.33%
+Precision: 75.00%
+Recall:    1.00%
+F1-score:  1.97%
+FPR:       0.33%
+FNR:       99.00%
+
+Decisions: {'ALLOW': 596, 'BLOCK': 1, 'WARN': 3}
+
+========================================================================
+B_BRAND_LEXICAL
+========================================================================
+TP: 1
+TN: 284
+FP: 16
+FN: 299
+
+Accuracy:  47.50%
+Precision: 5.88%
+Recall:    0.33%
+F1-score:  0.63%
+FPR:       5.33%
+FNR:       99.67%
+
+Decisions: {'ALLOW': 583, 'BLOCK': 17}
+
+========================================================================
+C_TLS
+========================================================================
+TP: 0
+TN: 300
+FP: 0
+FN: 300
+
+Accuracy:  50.00%
+Precision: 0.00%
+Recall:    0.00%
+F1-score:  0.00%
+FPR:       0.00%
+FNR:       100.00%
+
+Decisions: {'ALLOW': 600}
+
+========================================================================
+D_FULL
+========================================================================
+TP: 36
+TN: 282
+FP: 18
+FN: 264
+
+Accuracy:  53.00%
+Precision: 66.67%
+Recall:    12.00%
+F1-score:  20.34%
+FPR:       6.00%
+FNR:       88.00%
+
+Decisions: {'ALLOW': 546, 'BLOCK': 22, 'WARN': 32}
+
+========================================================================
+H2 ACCURACY COMPARISON
+========================================================================
+
+A_URL_DOMAIN: 50.33%
+B_BRAND_LEXICAL: 47.50%
+C_TLS: 50.00%
+D_FULL: 53.00%
+
+FULL MODEL ACCURACY DIFFERENCE:
+D_FULL minus A_URL_DOMAIN: +2.67 percentage points
+D_FULL minus B_BRAND_LEXICAL: +5.50 percentage points
+D_FULL minus C_TLS: +3.00 percentage points
+
+========================================================================
+CLASSIFICATION CONSISTENCY
+========================================================================
+
+A_URL_DOMAIN vs D_FULL:
+  Same classification: 550
+  Different classification: 50
+  Agreement: 91.67%
+
+B_BRAND_LEXICAL vs D_FULL:
+  Same classification: 563
+  Different classification: 37
+  Agreement: 93.83%
+
+C_TLS vs D_FULL:
+  Same classification: 546
+  Different classification: 54
+  Agreement: 91.00%
+
+========================================================================
+FULL ENGINE ANALYSIS LATENCY
+========================================================================
+Mean:   374.917 ms
+Median: 117.803 ms
+P95:    1535.961 ms
+
+========================================================================
+IMPORTANT INTERPRETATION NOTE
+========================================================================
+This development experiment compares indicator families within the existing frozen PhishGuard scoring architecture. It does not modify the underlying PhishGuard source code or decision thresholds.
+Results should be interpreted as component/ablation evidence and not as an independent final validation result.

@@ -1,0 +1,46 @@
+
+PHISHGUARD H1 COMPLEMENTARY DETECTION TEST
+==========================================
+
+Total observations: 200
+Browser not-evaluable observations: 0
+Browser evaluable observations: 200
+
+PHISHGUARD CONFUSION MATRIX
+TP: 9
+TN: 95
+FP: 5
+FN: 91
+
+PHISHGUARD PERFORMANCE
+Accuracy:  52.00%
+Precision: 64.29%
+Recall:    9.00%
+F1-score:  15.79%
+FPR:       5.00%
+FNR:       91.00%
+
+PAIRED PHISHING DETECTION
+Detected by both:       8
+Browser only:           79
+PhishGuard only:        1
+Detected by neither:    12
+Not evaluable:            0
+
+Browser phishing detections: 87
+Browser phishing misses:     13
+
+STATISTICAL COMPARISON
+Exact McNemar p-value: 0.000000
+Alpha: .05
+
+PHISHGUARD ANALYSIS LATENCY
+Mean:   495.913 ms
+Median: 120.258 ms
+
+INTERPRETATION NOTE
+PhishGuard-only detections represent phishing observations
+for which PhishGuard produced WARN or BLOCK while the default
+browser did not produce a phishing/deceptive-site warning.
+
+Statistical significance is evaluated at alpha = .05.
